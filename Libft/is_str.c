@@ -6,11 +6,11 @@
 /*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 13:16:12 by ssteveli          #+#    #+#             */
-/*   Updated: 2023/11/01 13:23:10 by ssteveli         ###   ########.fr       */
+/*   Updated: 2024/01/30 14:43:16 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	is_str(char *s)
 {

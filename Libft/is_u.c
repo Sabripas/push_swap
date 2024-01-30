@@ -6,11 +6,11 @@
 /*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:16:58 by ssteveli          #+#    #+#             */
-/*   Updated: 2023/11/01 14:05:32 by ssteveli         ###   ########.fr       */
+/*   Updated: 2024/01/30 14:43:18 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static int	ft_putnb_rec_u(unsigned int nb, int *count)
 {

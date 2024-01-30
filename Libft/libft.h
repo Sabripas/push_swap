@@ -6,7 +6,7 @@
 /*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:38:53 by ssteveli          #+#    #+#             */
-/*   Updated: 2024/01/15 14:15:27 by ssteveli         ###   ########.fr       */
+/*   Updated: 2024/01/30 14:41:41 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <unistd.h>
 
 size_t	ft_strlen(const char *str);
+int		ft_atoi(const char *str);
 int		ft_printf(const char *a, ...);
 int		is_chr(char s);
 int		is_str(char *s);

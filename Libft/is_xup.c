@@ -6,11 +6,11 @@
 /*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:36:03 by ssteveli          #+#    #+#             */
-/*   Updated: 2023/11/01 13:58:11 by ssteveli         ###   ########.fr       */
+/*   Updated: 2024/01/30 14:43:22 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static char	*make_upper(char *s)
 {

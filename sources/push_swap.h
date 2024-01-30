@@ -6,14 +6,14 @@
 /*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 14:16:20 by ssteveli          #+#    #+#             */
-/*   Updated: 2024/01/15 16:04:18 by ssteveli         ###   ########.fr       */
+/*   Updated: 2024/01/30 14:43:28 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# include "../libraries/Libft/ft_printf.h"
+# include "../Libft/libft.h"
 
 typedef struct s_struct
 {

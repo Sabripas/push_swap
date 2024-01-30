@@ -6,11 +6,11 @@
 /*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:26:03 by ssteveli          #+#    #+#             */
-/*   Updated: 2023/12/20 15:46:37 by ssteveli         ###   ########.fr       */
+/*   Updated: 2024/01/30 14:42:59 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

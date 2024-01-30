@@ -6,11 +6,11 @@
 /*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:47:59 by ssteveli          #+#    #+#             */
-/*   Updated: 2024/01/15 14:15:55 by ssteveli         ###   ########.fr       */
+/*   Updated: 2024/01/30 14:43:07 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

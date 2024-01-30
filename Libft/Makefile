@@ -6,7 +6,7 @@
 #    By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/20 15:34:06 by ssteveli          #+#    #+#              #
-#    Updated: 2024/01/15 14:15:42 by ssteveli         ###   ########.fr        #
+#    Updated: 2024/01/30 14:41:28 by ssteveli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ RESET		= \033[0m
 CC 			= cc
 
 SRCS		= ft_strlen.c \
+				ft_atoi.c \
 				ft_calloc.c \
 				ft_printf.c \
 				is_chr.c \
