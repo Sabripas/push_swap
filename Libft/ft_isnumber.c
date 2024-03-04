@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_isnumber.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 12:13:30 by ssteveli          #+#    #+#             */
-/*   Updated: 2024/01/30 14:42:54 by ssteveli         ###   ########.fr       */
+/*   Created: 2024/02/15 10:17:27 by ssteveli          #+#    #+#             */
+/*   Updated: 2024/02/15 10:17:27 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+int	ft_isdigit(char *c)
 {
-	char	*space;
-	size_t	i;
-	size_t	test;
+	int i;
 
-	test = size * count;
-	if (size != 0 && count != 0)
-	{
-		if (test / size != count)
-			return (0);
-	}
 	i = 0;
-	space = malloc(test);
-	if (!space)
-		return (0);
-	while (i < count * size)
+	while(c[i])
 	{
-		space[i] = 0;
+		if (!(c[i] >= '0' && c[i] <= '9'))
+			return (0);
 		i++;
 	}
-	return (space);
+	return (1);
 }

@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 12:13:30 by ssteveli          #+#    #+#             */
-/*   Updated: 2024/01/30 14:42:54 by ssteveli         ###   ########.fr       */
+/*   Created: 2023/10/12 12:28:58 by ssteveli          #+#    #+#             */
+/*   Updated: 2023/10/20 17:03:10 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_bzero(void *a, size_t len)
 {
-	char	*space;
-	size_t	i;
-	size_t	test;
+	unsigned char	*str;
+	size_t			i;
 
-	test = size * count;
-	if (size != 0 && count != 0)
-	{
-		if (test / size != count)
-			return (0);
-	}
+	str = a;
 	i = 0;
-	space = malloc(test);
-	if (!space)
-		return (0);
-	while (i < count * size)
+	while (i < len)
 	{
-		space[i] = 0;
+		str[i] = 0;
 		i++;
 	}
-	return (space);
+	return (str);
 }

@@ -10,26 +10,44 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include <stdarg.h>
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
 
+typedef struct s_list
+{
+	int				content;
+	int 			index;
+	struct s_list	*next;
+}					t_list;
+
 size_t	ft_strlen(const char *str);
+int		ft_isdigit(char *c);
+size_t	ft_strlenint(const int *str);
+int 	ft_strchr(int *a, int c);
 int		ft_atoi(const char *str);
 int		ft_printf(const char *a, ...);
+void	*ft_bzero(void *a, size_t len);
+char	*ft_itoa(int n);
 int		is_chr(char s);
 int		is_str(char *s);
 int		is_p(unsigned long s);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 int		is_d(int nb);
 int		is_u(unsigned int nb);
 int		is_x(unsigned int s);
 int		is_xup(unsigned int s);
 int		len_s(unsigned long s);
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_convert_base(char *nbr, char *base_from, char *base_to);
 int		ft_toupper(int c);
-
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *stack);
+void	ft_lstadd_back(t_list **lst, t_list *news);
+t_list	*ft_lstnew(int content, int index);
+t_list	*ft_lstlast(t_list *lst);
 #endif

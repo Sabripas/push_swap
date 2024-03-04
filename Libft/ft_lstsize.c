@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 12:13:30 by ssteveli          #+#    #+#             */
-/*   Updated: 2024/01/30 14:42:54 by ssteveli         ###   ########.fr       */
+/*   Created: 2024/02/14 12:24:10 by ssteveli          #+#    #+#             */
+/*   Updated: 2024/02/14 12:24:10 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+int	ft_lstsize(t_list *stack)
 {
-	char	*space;
-	size_t	i;
-	size_t	test;
+	int		i;
+	t_list	*temp;
 
-	test = size * count;
-	if (size != 0 && count != 0)
-	{
-		if (test / size != count)
-			return (0);
-	}
+	temp = stack;
 	i = 0;
-	space = malloc(test);
-	if (!space)
-		return (0);
-	while (i < count * size)
+	while (temp)
 	{
-		space[i] = 0;
+		temp = temp->next;
 		i++;
 	}
-	return (space);
+	return (i);
 }

@@ -1,4 +1,4 @@
-NAME			= push_swap
+NAME			= push_swap.a
 
 GREEN			= \033[0;32m
 RED				= \033[0;31m
@@ -19,12 +19,12 @@ REMOVE 			= rm -f
 SRCS_DIR		= ./sources/
 
 SRCS 			= $(addprefix $(SRCS_DIR),\
-				push_swap.c \
-				swap.c \
-				push.c \
-				rotate.c \
-				rotate_2.c \
-				manip.c)
+					sp.c \
+					r.c \
+					stack.c \
+					sort.c \
+					sort_little.c \
+					push_swap.c)
 
 OBJS		= ${SRCS:.c=.o}
 
@@ -45,14 +45,16 @@ clean:
 			@cd $(LIBFT) && make clean
 
 fclean:		clean
-			${RM} ${NAME}
+			${RM} push_swap
+			${RM} push_swap.a
 			${RM} a.out
 			@cd $(LIBFT) && make fclean
 
 re:				fclean all
 
 run:			${NAME}
-				${CC} ${NAME} ${LIBFT}/${LIBFT_NAME} ${STANDARD_FLAGS} -o ${NAME}
+				${CC} ${NAME} ${LIBFT}/${LIBFT_NAME} ${STANDARD_FLAGS} -o push_swap
+				${RM} ${NAME}
 				@echo "$(NAME): $(GREEN)$(NAME) is ready to run.$(RESET)"
 					@echo
 

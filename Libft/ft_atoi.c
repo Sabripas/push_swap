@@ -6,11 +6,12 @@
 /*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:22:55 by ssteveli          #+#    #+#             */
-/*   Updated: 2024/01/30 15:21:56 by ssteveli         ###   ########.fr       */
+/*   Updated: 2024/01/30 15:20:43 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_len_num(const char *str, int i)
 {
@@ -30,11 +31,9 @@ int	ft_len_num(const char *str, int i)
 int	ft_print_int_atoi(const char *str, int i, char sign)
 {
 	long long int	number;
-	int				size;
 	long long int	test;
 
 	number = 0;
-	size = ft_len_num(str, i);
 	while (str[i] > 47 && str[i] < 58)
 	{
 		test = number;

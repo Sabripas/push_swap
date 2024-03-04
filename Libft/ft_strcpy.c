@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 12:13:30 by ssteveli          #+#    #+#             */
-/*   Updated: 2024/01/30 14:42:54 by ssteveli         ###   ########.fr       */
+/*   Created: 2023/10/12 12:46:21 by ssteveli          #+#    #+#             */
+/*   Updated: 2023/10/20 18:29:40 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	char	*space;
 	size_t	i;
-	size_t	test;
 
-	test = size * count;
-	if (size != 0 && count != 0)
+	if (size == 0)
+		return (ft_strlen(src));
+	if (ft_strlen(src) == 0)
 	{
-		if (test / size != count)
-			return (0);
+		dest[0] = 0;
+		return (ft_strlen(src));
 	}
 	i = 0;
-	space = malloc(test);
-	if (!space)
-		return (0);
-	while (i < count * size)
+	while (src[i] != '\0' && i < (size - 1))
 	{
-		space[i] = 0;
+		dest[i] = src[i];
 		i++;
 	}
-	return (space);
+	dest[i] = '\0';
+	return (ft_strlen(src));
 }
