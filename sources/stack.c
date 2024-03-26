@@ -12,15 +12,15 @@
 
 #include "push_swap.h"
 
-void    init_stack(t_list **stack, char **av)
+void    init_stack(t_list **stack, char **args)
 {
     int     i;
     t_list *new;
 
-    i = 1;
-    while (av[i])
+    i = 0;
+    while (args[i])
 	{
-		new = ft_lstnew(ft_atoi(av[i]), 0);
+		new = ft_lstnew(ft_atoi(args[i]), 0);
 		ft_lstadd_back(stack, new);
 		i++;
 	}

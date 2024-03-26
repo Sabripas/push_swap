@@ -19,7 +19,7 @@ int	ft_isdigit(char *c)
 	i = 0;
 	while(c[i])
 	{
-		if (!(c[i] >= '0' && c[i] <= '9'))
+		if (!((c[i] >= '0' && c[i] <= '9') || c[i] == '-'))
 			return (0);
 		i++;
 	}

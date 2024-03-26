@@ -26,12 +26,16 @@ SRCS		= ft_strlen.c \
 				ft_isnumber.c \
 				ft_printf.c \
 				ft_itoa.c\
+				ft_strlcat.c \
+				ft_strdup.c \
 				ft_bzero.c \
+				ft_split.c \
 				is_chr.c \
 				is_d.c \
 				is_p.c \
 				is_str.c \
 				ft_strchr.c \
+				ft_substr.c \
 				is_u.c \
 				is_x.c \
 				ft_strcpy.c \
