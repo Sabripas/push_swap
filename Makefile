@@ -23,7 +23,11 @@ SRCS 			= $(addprefix $(SRCS_DIR),\
 					r.c \
 					stack.c \
 					sort.c \
+					to_len.c \
 					sort_little.c \
+					sort_5.c \
+					utilises.c \
+					checks.c \
 					push_swap.c)
 
 OBJS		= ${SRCS:.c=.o}
