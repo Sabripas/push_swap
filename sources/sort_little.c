@@ -125,6 +125,7 @@ void	sort_little(t_list **stack_a, t_list **stack_b, int ac)
 		if (temp->index > temp->next->index)
 		{
 			s(stack_a);
+			ft_printf("sa\n");
 			return ;
 		}
 	}

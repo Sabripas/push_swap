@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-int	ft_strchr(int *a, int c)
+int	ft_strchr(int *a, int c, int j)
 {
 	int	i;
 
 	i = 0;
-	while (a[i])
+	while (i < j)
 	{
 		if (a[i] == c)
 			return (1);

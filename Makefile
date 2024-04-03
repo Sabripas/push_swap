@@ -12,7 +12,7 @@ CC 				= cc
 
 AR				= ar rc
 
-STANDARD_FLAGS 	= -Wall -Werror -Wextra -fsanitize=address
+STANDARD_FLAGS 	= -Wall -Werror -Wextra #-fsanitize=address
 
 REMOVE 			= rm -f
 

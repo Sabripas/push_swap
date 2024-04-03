@@ -2,14 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+        
-	+:+     */
-/*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+      
-	+#+        */
-/*                                                +#+#+#+#+#+  
-	+#+           */
-/*   Created: 2024/02/22 13:17:04 by ssteveli          #+#    #+#             */
-/*   Updated: 2024/02/22 13:17:04 by ssteveli         ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ssteveli <ssteveli@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/27 15:58:52 by ssteveli          #+#    #+#             */
+/*   Updated: 2024/03/27 15:58:52 by ssteveli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +21,8 @@ int	is_0(int i, int index, int len)
 	a = ft_itoa(i);
 	b = ft_convert_base(a, "0123456789", "01");
 	c = ft_calloc(len + 1, sizeof(char));
+	if (!c)
+		return (2);
 	to_len(b, len, c);
 	if (c[index] == '1')
 	{
@@ -81,7 +80,7 @@ int	num_of_b(t_list **stack_b)
 	return (i);
 }
 
-void	sort_stack_bis(t_list **stack_a, t_list **stack_b, int index, int len)
+int	sort_stack_bis(t_list **stack_a, t_list **stack_b, int index, int len)
 {
 	t_list	*temp;
 
@@ -90,15 +89,19 @@ void	sort_stack_bis(t_list **stack_a, t_list **stack_b, int index, int len)
 	{
 		ft_printf("pb\n");
 		pb(stack_a, stack_b);
+		return (1);
 	}
-	else
+	else if (is_0(temp->index, index, len) == 1)
 	{
 		ft_printf("ra\n");
 		r(stack_a);
+		return (1);
 	}
+	else
+		return (0);
 }
 
-void	sort_stack(t_list **stack_a, t_list **stack_b, int ac)
+int	sort_stack(t_list **stack_a, t_list **stack_b, int ac)
 {
 	t_list	*temp;
 	int		index;
@@ -113,7 +116,8 @@ void	sort_stack(t_list **stack_a, t_list **stack_b, int ac)
 	{
 		j = ac - 1;
 		while (j-- >= 0)
-			sort_stack_bis(stack_a, stack_b, index, len);
+			if (sort_stack_bis(stack_a, stack_b, index, len) == 0)
+				return (0);
 		i = num_of_b(stack_b);
 		while (i > 0)
 		{
@@ -123,4 +127,5 @@ void	sort_stack(t_list **stack_a, t_list **stack_b, int ac)
 		}
 		index -= 1;
 	}
+	return (1);
 }

@@ -29,7 +29,7 @@ size_t	ft_strlen(const char *str);
 int		ft_isdigit(char *c);
 char	*ft_strdup(const char *s);
 size_t	ft_strlenint(const int *str);
-int		ft_strchr(int *a, int c);
+int		ft_strchr(int *a, int c, int j);
 int		ft_atoi(const char *str);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 int		ft_printf(const char *a, ...);

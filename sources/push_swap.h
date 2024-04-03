@@ -30,7 +30,7 @@ char	*to_len(char *str, int len, char *a);
 int		is_0(int i, int index, int len);
 int		len_big(t_list **stack_a, t_list **stack_b);
 int		num_of_b(t_list **stack_b);
-void	sort_stack(t_list **stack_a, t_list **stack_b, int ac);
+int		sort_stack(t_list **stack_a, t_list **stack_b, int ac);
 void	sort_little(t_list **stack_a, t_list **stack_b, int ac);
 int		check_form(int ac, char **av);
 int		check_arg(int ac, char **av);

@@ -49,6 +49,8 @@ char	**to_args(int ac, char **av)
 	if (ft_strchr2(av[1], ' ') == 1)
 	{
 		args = ft_calloc(ac, sizeof(char *));
+		if (!args)
+			return (0);
 		while (i <= ac)
 		{
 			args[i - 1] = av[i];
@@ -60,23 +62,28 @@ char	**to_args(int ac, char **av)
 	return (args);
 }
 
-void	sort_list(int num_args, char **args, t_list **stack_a, t_list **stack_b)
+int	sort_list(int num_args, char **args, t_list **stack_a, t_list **stack_b)
 {
 	if (sorted(num_args, args) == 0)
 	{
 		stack_a = ft_calloc(1, sizeof(t_list));
+		if (!stack_a)
+			return (0);
 		*stack_a = 0;
 		stack_b = ft_calloc(1, sizeof(t_list));
+		if (!stack_b)
+			return (0);
 		*stack_b = 0;
 		init_stack(stack_a, args);
 		to_positif(stack_a, stack_b, num_args);
-		if (num_args > 2 && num_args < 6)
+		if (num_args >= 2 && num_args < 6)
 			sort_little(stack_a, stack_b, num_args);
 		else
 			sort_stack(stack_a, stack_b, num_args);
 		free_stack(stack_a);
 		free_stack(stack_b);
 	}
+	return (1);
 }
 
 int	check_ac(int ac, char **av)
@@ -104,13 +111,15 @@ int	main(int ac, char **av)
 	if (check_ac(ac, av) == 0)
 		return (0);
 	args = to_args(ac, av);
+	if (args == 0)
+		return (0);
 	num_args = number_args(ac, av, args);
 	if (check_arg(num_args, args) == 0 || valid_arg(num_args, args) == 0)
 	{
 		write(2, "Error\n", 6);
 		return (0);
 	}
-	if (num_args < 3)
+	if (num_args < 2)
 		return (0);
 	sort_list(num_args, args, stack_a, stack_b);
 	free(args);
